@@ -22,20 +22,20 @@ int getArrayInfo(const int *array, int size, int * uniquest, int * smallest, int
         //unique block
         for (int k = 0; k < unique; k++){
             //'fail' section -- if the loop matches a value in array to a stored unique value, the loop breaks
-            if (*(array + i) == uniqueArray[k])
+            if (array[i] == uniqueArray[k])
                 break;
             //'success' section -- if the loop reaches the end, it'll increment the unique counter and store the unique value
             if (k == unique - 1){
-                uniqueArray[unique] = *(array + i);
+                uniqueArray[unique] = *array[i];
                 unique++;
             }
         }
 
         //small and large block
-        if (*(array + i) < small)
-            small = *(array + i);
-        if (*(array + i) > large)
-            large = *(array + i);
+        if (array[i] < small)
+            small = array[i];
+        if (array[i] > large)
+            large = array[i];
     }
 
     //final 'return' values
