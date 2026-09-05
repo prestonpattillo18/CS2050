@@ -5,7 +5,7 @@
 float * copyFloatArray (float inputArray[], int * outputLength){
     //validity check!
     if (!inputArray || !outputLength){
-        printf("Error (7)");
+        printf("Error (8)");
         return NULL;
     }
 
@@ -31,11 +31,13 @@ float * copyFloatArray (float inputArray[], int * outputLength){
 }
 
 void freeFloatArray(float ** outputArray){
+    //valid
     if (!outputArray || !*outputArray){
-        printf("Error (32)");
+        printf("Error (36)");
         return;
     }
 
+    //frees and unassigns that array
     free(*outputArray);
     *outputArray = NULL;
 
